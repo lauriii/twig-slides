@@ -89,7 +89,7 @@
             <h3>Drupal 7</h3>
             <pre>
               <code class="coffeescript">
-      &lt;body class="html drupal7 is-awesome wtf">
+      &lt;body class="html drupal7 is-awesome wtf not-logged-in no-sidebars page-node page-node- page-node-274 node-type-page">
               </code>
             </pre>
             <h3>Drupal 8</h3>
@@ -120,6 +120,10 @@
               </code>
             </pre>
           </section>
+          <section>
+            <h2>Seven CSS file structure</h2>
+            <img src="img/seven_css_structure.png">
+          </section>
         </section>
         <section>
           <section>
@@ -132,10 +136,22 @@
           <section>
             <img src="img/file_structure.png">
           </section>
+          <section>
+            Templates in template folder!
+            <img src="img/file_structure2.png">
+          </section>
         </section>
         <section>
           <section data-background="http://www.chewy.com/c/sites/default/files/imce/images/article/Happy-smiling-cat-portrait.jpg">
             <h1>Twig</h1>
+          </section>
+          <section>
+            <h3>Drupal 7 theme layer - WTF?</h3>
+            <img src="img/theme_layer_d7.png" height="500px">
+          </section>
+          <section>
+            <h3>Drupal 8 theme layer - FTW!</h3>
+            <img src="img/theme_layer_d8.png" height="400px">
           </section>
           <section>
             <h2>Basics in under 5 minutes</h2>
@@ -274,10 +290,38 @@
             </pre>
           </section>
           <section>
+            <h2>Twig blocks</h2>
+            <pre>
+              <code>
+      {% block headerblock %}
+        This block needs more vodka!
+      {% endblock %}
+              </code>
+            </pre>
+            <pre>
+              <code>
+      {% extends "page.html.twig" %}
+      {% block headerblock %}
+        More vodka!
+      {% endblock %}
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h2>Will return:</h2>
+            <h4>Other pages than front page:</h4>
+            <img src="img/need_vodka.png">
+          </section>
+          <section>
+            <h2>Will return:</h2>
+            <h4>Front page:</h4>
+            <img src="img/more_vodka.png">
+          </section>
+          <section>
             <h2>Moar?</h2>
             <h3><a href="http://twig.sensiolabs.org/">Twig documentation: http://twig.sensiolabs.org/</a></h3>
           </section>
-          <section>
+          <section data-background="http://critterbabies.com/wp-content/gallery/kittens/cute-kitten-playing.jpg">
             <h2>You no like it?</h2>
           </section>
           <section data-background="img/there-i-fixed-it.jpg">
@@ -373,6 +417,40 @@
               </code>
             </pre>
           </section>
+          <section data-background="http://i2.kym-cdn.com/entries/icons/original/000/009/993/tumblr_m0wb2xz9Yh1r08e3p.jpg">
+            <h2>Twig debug</h2>
+            <h4>No more guessing!</h4>
+          </section>
+          <section>
+            services.yml
+            <pre>
+              <code>
+                debug: true
+              </code>
+            </pre>
+            <small>Works weirdly, but when it works it's awesome!</small>
+          </section>
+          <section>
+            <h2>Will return:</h2>
+            <pre>
+              <code>
+    <!-- THEME DEBUG -->
+    <!-- CALL: _theme('page') -->
+    <!-- FILE NAME SUGGESTIONS:
+       * page--front.html.twig
+       * page--node.html.twig
+       x page.html.twig
+    -->
+    <!-- BEGIN OUTPUT from 'core/themes/bartik/templates/page.html.twig' -->
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h2>Want this to D7?</h2>
+          </section>
+          <section>
+            <h2><a href="https://www.drupal.org/node/2307505">Do it! #2307505</a></h2>
+          </section>
         </section>
         <section>
           <section data-background="http://www.stitchfashion.com/wp-content/uploads/2014/04/kviqq.png">
@@ -383,8 +461,12 @@
             <ul>
               <li>Create core base theme - why not?</li>
               <li>Move all class logic to classy - so no classes from core - awesome!</li>
-              <li>Still under constraction - we need you! #2289511</li>
+              <li>Still under constraction - we need you! <a href="https://www.drupal.org/node/2329501">#2329501</a></li>
             </ul>
+          </section>
+          <section>
+            <h2>Creating new theme?</h2>
+            <h3>Remember to extend Classy!</h3>
           </section>
         </section>
         <section>
@@ -416,7 +498,7 @@
             <img src="img/responsive_image.png">
           </section>
           <section>
-            <h2>Will result:</h2>
+            <h2>Will return:</h2>
             <pre>
               <code class="xml">
    <picture>
@@ -430,11 +512,32 @@
           </section>
         </section>
         <section>
+          <section data-background="https://pbs.twimg.com/media/BpioEelIEAIcJOT.jpg:large">
+            <h1>Consensus banana</h1>
+          </section>
+          <section>
+            <h2>What will still change?</h2>
+            <h3 class="fragment slide-in">Move classes from preprocess to Twig templates</h3>
+            <h3 class="fragment slide-in">Move all the classes to Classy</h3>
+            <h3 class="fragment slide-in">Simplify core markup even more!</h3>
+            <h3 class="fragment slide-in">Remove front-end logic from preprocess<small>(not part of conensus banana)</small></h3>
+          </section>
+        </section>
+        <section>
+          <section data-background="img/kitten.jpg">
+            <h2>Bonus!</h2>
+          </section>
+          <section>
+            <h2>No more hardcoded logo!</h2>
+            <img src="img/logo_block.png">
+          </section>
+        </section>
+        <section>
           <section>
             <h2>So..</h2>
           </section>
-          <section>
-            <h2>Drupal 8 Front-End will be the best shit ever</h2>
+          <section data-background="http://images6.fanpop.com/image/photos/33300000/Love-love-33308236-2560-1600.jpg">
+            <h2>Drupal 8 <span class="fragment slide-in">Front-End</span> will be the best shit <span class="fragment slide-in">so far...</span></h2>
           </section>
         </section>
       </div>
