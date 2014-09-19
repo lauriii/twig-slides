@@ -45,7 +45,21 @@
 			<div class="slides">
         <section>
           <h1>Drupal 8 Theming</h1>
-          <h5>12.9.2014 Lauri Eskola</h5>
+          <h5>19.9.2014 Lauri Eskola</h5>
+        </section>
+        <section data-background="http://dallasbach.org/wp-content/uploads/2013/06/champagne.png">
+          <h2>We are down to 0 Drupal 8 beta-blockers!</h2>
+        </section>
+        <section>
+          <section>
+            <h4>Me:</h4>
+            <h2>@lauriii</h2>
+            <h3>(Lauri Eskola)</h3>
+          </section>
+          <section>
+            <h4>Twitter:</h4>
+            <h2>@laurii1</h2>
+          </section>
         </section>
         <section>
           <section>
@@ -140,6 +154,13 @@
             Templates in template folder!
             <img src="img/file_structure2.png">
           </section>
+          <section>
+            <h1>AND!</h1>
+          </section>
+          <section>
+            <h3>Templates will most likely be auto-loaded with hook_theme implementation key!</h3>
+            <h5><a href="https://www.drupal.org/node/2226207">We need your help! #2226207</a></h5>
+          </section>
         </section>
         <section>
           <section data-background="http://www.chewy.com/c/sites/default/files/imce/images/article/Happy-smiling-cat-portrait.jpg">
@@ -215,12 +236,12 @@
             <h2>Loops</h2>
             <pre>
               <code>
-        <h2>Team Awesome</h2>
-        <ul>
-      {% for user in users %}
-        <li>{{ user.username}}</li>
-      {% endfor %}
-        </ul>
+      <h2>Team Awesome</h2>
+      <ul>
+        {% for user in users %}
+          <li>{{ user.username}}</li>
+        {% endfor %}
+      </ul>
               </code>
             </pre>
             <pre>
@@ -291,6 +312,7 @@
           </section>
           <section>
             <h2>Twig blocks</h2>
+            page.html.twig
             <pre>
               <code>
       {% block headerblock %}
@@ -298,6 +320,7 @@
       {% endblock %}
               </code>
             </pre>
+            page--front.html.twig
             <pre>
               <code>
       {% extends "page.html.twig" %}
@@ -318,7 +341,7 @@
             <img src="img/more_vodka.png">
           </section>
           <section>
-            <h2>Moar?</h2>
+            <h2>More stuff?</h2>
             <h3><a href="http://twig.sensiolabs.org/">Twig documentation: http://twig.sensiolabs.org/</a></h3>
           </section>
           <section data-background="http://critterbabies.com/wp-content/gallery/kittens/cute-kitten-playing.jpg">
@@ -389,7 +412,7 @@
               <code>
       &lt;?php
         function template_preprocess_username(&$variables) {
-          $variables['attributes'] = new Attribute;
+          $variables['attributes'] = new Attribute();
         }
       ?&gt;
               </code>
@@ -528,9 +551,17 @@
             <h2>Bonus!</h2>
           </section>
           <section>
-            <h2>No more hardcoded logo!</h2>
+            <h2>No more hardcoded logo..</h2>
             <img src="img/logo_block.png">
           </section>
+          <section>
+            <h2>... or menu!</h2>
+            <img src="img/menu_as_block.png">
+          </section>
+        </section>
+        <section data-background="http://genero.fi/wp-content/uploads/2014/05/14063096928_ab33fcd101_b-1.jpg">
+          <h2>Coder sprints tomorrow at Wunderkraut!</h2>
+          <h3>11-04</h3>
         </section>
         <section>
           <section>
