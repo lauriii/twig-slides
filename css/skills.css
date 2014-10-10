@@ -70,3 +70,15 @@ td, th {
 .reveal pre code {
   background: #242424;
 }
+
+.huge-list ul {
+  vertical-align: top;
+}
+
+.no {
+  color: #FF4747 !important;
+}
+
+.yes {
+  color: #85FF85 !important;
+}
