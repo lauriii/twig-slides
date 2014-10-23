@@ -50,14 +50,14 @@
         <section>
           <section>
             <h4>Me:</h4>
+            <h3>Lauri Eskola</h3>
+            <img src="img/lauri.jpg">
+          </section>
+          <section>
             <h2>@lauriii</h2>
-            <h3>(Lauri Eskola)</h3>
           </section>
           <section class="twitter">
             <img src="img/twitter.png" width="100px"><h2>@laurii1</h2>
-          </section>
-          <section>
-            <img src="img/lauri.jpg">
           </section>
         </section>
         <section>
@@ -168,6 +168,15 @@
             <a href="https://www.drupal.org/node/2226207">
               <h2>Templates are auto-loaded with hook_theme implementation key!</h2>
             </a>
+          </section>
+          <section>
+            <h2>.php vs .twig</h2>
+            <h3>Drupal 7</h3>
+            <h3>55 templates</h3>
+            <h3>154 functions</h3><br>
+            <h3>Drupal 8</h3>
+            <h3>21 functions</h3>
+            <h3>149 templates</h3>
           </section>
         </section>
         <section>
@@ -446,6 +455,7 @@
 
       {{ class_name|clean_class }}
       {{ contributors|without('lauriii') }},
+      {{ stuff|placeholder('kitten') }}
               </code>
             </pre>
             <h3>Returns</h3>
@@ -453,6 +463,7 @@
               <code>
       lauri-druid
       rteijeiro,joelpittet,Cottser,Dries,
+      kitten
           </section>
               </code>
             </pre>
@@ -634,14 +645,25 @@
               </code>
             </pre>
           </section>
+          <section>
+            <video controls data-autoplay>
+              <source src="videos/class-cleanup.mp4" type="video/mp4">
+            </video>
+          </section>
           <section data-background="http://www.stitchfashion.com/wp-content/uploads/2014/04/kviqq.png">
             <h4>Phase 2:</h4>
             <h2>New theme: Classy<h2>
           </section>
           <section>
+            <img src="img/custom-theme.png">
+          </section>
+          <section>
             <h2>What will this change?</h2>
             <h3 class="fragment slide-in">Move all the class logic to Classy - so no classes from core <small>(even automated tests uses now Classy)</small></h3>
             <h3 class="fragment slide-in">Simplify core markup even more! <small>(removing all unnecessary divs & other elements)</small></h3>
+          </section>
+          <section>
+            <img src="img/theme-overview.png">
           </section>
           <section>
             <h2>Creating new theme?</h2>
@@ -653,12 +675,12 @@
             <h2>Bonus!</h2>
           </section>
           <section>
-            <h2>No more hardcoded logo..</h2>
-            <img src="img/logo_block.png">
+            <h2>No more hardcoded menu...</h2>
+            <img src="img/menu_as_block.png">
           </section>
           <section>
-            <h2>... or menu!</h2>
-            <img src="img/menu_as_block.png">
+            <h2>...or logo!</h2>
+            <img src="img/logo_block.png">
           </section>
         </section>
         <section>
