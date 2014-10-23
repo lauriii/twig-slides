@@ -21,6 +21,10 @@ body {
   font-family: bariol_regularregular;
 }
 
+.reveal section[data-background] * { 
+  text-shadow: 5px 2px 2px #000000;
+}
+
 .reveal section img {
   border: none;
   box-shadow: none;
@@ -82,3 +86,13 @@ td, th {
 .yes {
   color: #85FF85 !important;
 }
+
+.twitter img, .twitter h2 {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.twitter h2 {
+  margin: 0 30px;
+}
+

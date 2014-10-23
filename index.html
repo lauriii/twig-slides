@@ -45,7 +45,7 @@
 			<div class="slides">
         <section>
           <h1>Drupal 8 Theming</h1>
-          <h5>19.9.2014 Lauri Eskola</h5>
+          <h5>24.9.2014 Lauri Eskola</h5>
         </section>
         <section>
           <section>
@@ -53,9 +53,11 @@
             <h2>@lauriii</h2>
             <h3>(Lauri Eskola)</h3>
           </section>
+          <section class="twitter">
+            <img src="img/twitter.png" width="100px"><h2>@laurii1</h2>
+          </section>
           <section>
-            <h4>Twitter:</h4>
-            <h2>@laurii1</h2>
+            <img src="img/lauri.jpg">
           </section>
         </section>
         <section>
@@ -90,10 +92,12 @@
             </pre>
           </section>
           <section>
-            <h2>So Drupal 8 WONT support</h2>
+            <h2>So Drupal 8 WON'T support</h2>
             <h2 class="fragment slide-in">ie 6</h2>
             <h2 class="fragment slide-in">ie 7</h2>
             <h2 class="fragment slide-in">ie 8</h2>
+          </section>
+          <section data-background="http://www.reactiongifs.us/wp-content/uploads/2013/06/cheering_minions.gif">
           </section>
           <section>
             <h2>Drupal CSS</h2>
@@ -111,7 +115,7 @@
             </pre>
           </section>
           <section>
-            <h2>CSS build on SMACSS</h2>
+            <h2>CSS build on SMACSS and BEM</h2>
             <h5><a href="https://www.drupal.org/node/1887918">More from #1887918</a></h5>
             <h3>CSS</h3>
             <pre>
@@ -119,7 +123,7 @@
       .field {
         margin: 6px 9px;
       }
-      .field .field--name {
+      .field.field--name {
         color: pink; 
       }
               </code>
@@ -134,6 +138,12 @@
           <section>
             <h2>Seven CSS file structure</h2>
             <img src="img/seven_css_structure.png">
+          </section>
+          <section>
+            <h3>Removing CSS files</h3>
+            <video controls data-autoplay>
+              <source src="videos/remove-css.mp4" type="video/mp4">
+            </video>
           </section>
         </section>
         <section>
@@ -283,6 +293,21 @@
               </code>
             </pre>
           </section>
+         <section>
+            <h2>Loop with empty text</h2>
+            <pre>
+              <code>
+      <h2>Team Awesome</h2>
+      <ul>
+        {% for user in users %}
+          <li>{{ user.username}}</li>
+        {% else %}
+          <li>no results found</li>
+        {% endfor %}
+      </ul>
+              </code>
+            </pre>
+          </section>
           <section>
             <h2>Filter</h2>
             <pre>
@@ -361,7 +386,7 @@
             <pre>
               <code>
       {% block headerblock %}
-        This block needs more vodka!
+        <h2>This block needs more kittens!</h2>
       {% endblock %}
               </code>
             </pre>
@@ -370,20 +395,16 @@
               <code>
       {% extends "page.html.twig" %}
       {% block headerblock %}
-        More vodka!
+        {{ parent() }}
+        <h4>Kitten!</h4>
       {% endblock %}
               </code>
             </pre>
           </section>
           <section>
-            <h2>Will return:</h2>
-            <h4>Other pages than front page:</h4>
-            <img src="img/need_vodka.png">
-          </section>
-          <section>
-            <h2>Will return:</h2>
-            <h4>Front page:</h4>
-            <img src="img/more_vodka.png">
+            <video controls data-autoplay>
+              <source src="videos/twig-blocks.mp4" type="video/mp4">
+            </video>
           </section>
           <section>
             <h2>More stuff?</h2>
@@ -436,21 +457,6 @@
               </code>
             </pre>
           <section>
-            <h2>Add/Remove class</h2>  
-            <h4><a href="https://www.drupal.org/node/2325067">More information #2325067</a></h4>
-            <pre>
-              <code class="xml">
-      &lt;div{{ attributes.addClass('field-item-' ~ name|clean_class) }}&gt;
-              </code>
-            </pre>
-            OR
-            <pre>
-              <code class="xml">
-      &lt;div{{ attributes.removeClass('GTFO', 'i-hate--you') }}&gt;
-              </code>
-            </pre>
-          </section>
-          <section>
             <h2>HTML Attributes</h2>
             <h4><a href="https://www.drupal.org/node/2325517">Not ready yet, more info #2325517</a></h4>
             <h4>Preprocess:</h4>
@@ -466,7 +472,24 @@
             <h4>Template:</h4>
             <pre>
               <code class="xml">
-      &lt;div{{ attributes.addAttribute('I-Love', 'Dries') }}&gt;
+      &lt;div{{ attributes.setAttribute('id', 'kitten').setAttribute('I-Love', 'Dries') }}&gt;
+
+      &lt;div{{ attributes.removeAttribute('id') }}&gt;
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h2>Add/Remove class</h2>  
+            <h4><a href="https://www.drupal.org/node/2325067">More information #2325067</a></h4>
+            <pre>
+              <code class="xml">
+      &lt;div{{ attributes.addClass('field-item-' ~ name|clean_class) }}&gt;
+              </code>
+            </pre>
+            OR
+            <pre>
+              <code class="xml">
+      &lt;div{{ attributes.removeClass('GTFO', 'i-hate--you') }}&gt;
               </code>
             </pre>
           </section>
@@ -491,16 +514,6 @@
             <h4>No more guessing!</h4>
           </section>
           <section>
-            services.yml
-            <pre>
-              <code>
-                debug: true
-              </code>
-            </pre>
-            <small>Works weirdly, but when it works it's awesome!</small>
-          </section>
-          <section>
-            <h2>Will return:</h2>
             <pre>
               <code>
     <!-- THEME DEBUG -->
@@ -515,10 +528,35 @@
             </pre>
           </section>
           <section>
+            <video controls data-autoplay>
+              <source src="videos/debug.mp4" type="video/mp4">
+            </video>
+          </section>
+          <section>
             <h2>Want this to D7?</h2>
           </section>
           <section>
             <h2><a href="https://www.drupal.org/node/2307505">Do it! #2307505</a></h2>
+          </section>
+        </section>
+        <section>
+          <section data-background="img/cleaning.jpeg">
+            <h2>Deep template clean up</h2>
+          </section>
+          <section>
+            <h2>We've made even @mortendk rock while theming</h2>
+          </section>
+          <section>
+            <h5>pager.html.twig</h5>
+            <video controls>
+              <source src="videos/pager.mp4" type="video/mp4">
+            </video>
+          </section>
+          <section>
+            <h5>menu.html.twig</h5>
+            <video controls>
+              <source src="videos/menu.mp4" type="video/mp4">
+            </video>
           </section>
         </section>
         <section>
@@ -566,8 +604,8 @@
           <section>
             <h2>Steps:</h2>
             <ul>
-              <li>Phase 1. Create core base theme - why not? <span class="fragment yes"> &#x2713; done!</li>
-              <li>Phase 2. Move all class logic to classy - so no classes from core - awesome!<span class="fragment yes"> <- we are here!</span></li>
+              <li>Phase 1. Move all the classes to templates <span class="fragment yes"> &#x2713; done!</li>
+              <li>Phase 2. Classy<span class="fragment yes"> <- we are here!</span></li>
             </ul>
           </section>
           <section>
@@ -575,10 +613,26 @@
             <h2>Move classes from preprocess to templates</h2>
           </section>
           <section>
-            <h3>Move all the classes to Classy - so no classes from core - awesome!</h3>
-          </section>
-          <section>
-            <h2>Why all this hype?</h2>
+            <h4>node.html.twig</h4>
+            <pre>
+              <code class="xml" contenteditable>
+  {%
+    set classes = [
+      'node',
+      'node--type-' ~ node.bundle|clean_class,
+      node.isPromoted() ? 'node--promoted',
+      node.isSticky() ? 'node--sticky',
+      not node.isPublished() ? 'node--unpublished',
+      view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+      'clearfix',
+    ]
+  %}
+  &lt;article{{ attributes.addClass(classes) }}>
+   {{ content }}
+  &lt;/article>
+
+              </code>
+            </pre>
           </section>
           <section data-background="http://www.stitchfashion.com/wp-content/uploads/2014/04/kviqq.png">
             <h4>Phase 2:</h4>
@@ -586,7 +640,7 @@
           </section>
           <section>
             <h2>What will this change?</h2>
-            <h3 class="fragment slide-in">Move all the class logic to Classy <small>(even automated tests uses now Classy)</small></h3>
+            <h3 class="fragment slide-in">Move all the class logic to Classy - so no classes from core <small>(even automated tests uses now Classy)</small></h3>
             <h3 class="fragment slide-in">Simplify core markup even more! <small>(removing all unnecessary divs & other elements)</small></h3>
           </section>
           <section>
@@ -608,16 +662,13 @@
           </section>
         </section>
         <section>
-          <h2>Want to help?</h2>
-          <h3 class="fragment">RC1 means markup freeze...</h3>
-          <h3 class="fragment">... so there's plenty of time still!</h3>
-        </section>
-        <section>
           <section>
-            <h2>So..</h2>
+            <h2>Want to help?</h2>
+            <h3 class="fragment">RC1 means markup freeze...</h3>
+            <h3 class="fragment">... so there's plenty of time still!</h3>
           </section>
-          <section data-background="http://images6.fanpop.com/image/photos/33300000/Love-love-33308236-2560-1600.jpg">
-            <h2>Drupal 8 <span class="fragment slide-in">Front-End</span> will be the best shit <span class="fragment slide-in">so far...</span></h2>
+          <section>
+            <h1>Questions?</h1>
           </section>
         </section>
       </div>
