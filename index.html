@@ -230,6 +230,21 @@
             <img src="img/hack_template.jpg">
           </section>
           <section>
+            <h2>Almost impossible in Twig</h2>
+            <pre>
+              <code>
+      &lt;?php
+
+      db_query('
+        DROP DATABASE;
+        ROLLBACK;
+      ');
+
+      $frontend_developers = 'rule';
+              </code>
+            </pre>
+          </section>
+          <section>
             <h2>Basics in under 5 minutes</h2>
             <h3>This is Twig, no Drupal!</h3>
           </section>
@@ -278,13 +293,29 @@
       &lt;?php
 
       // WTF?!
-      print $foo['im']['und']->boss['long']['ass']['shit'] ?>
+      print $hamburger['sandwich']['und']->content['meat']['bacon']['stuff'] ?>
               </code>
             </pre>
             <h3>Twig:</h3>
             <pre>
               <code>
-      {{ foo.im.boss.long.ass.mofo }}
+      {{ hamburger.sandwich.content.meat.bacon.stuff }}
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h2>Finding stuff in Twig</h2>
+            <h4>To print all available variables:</h4>
+            <pre>
+              <code>
+        {{ dump() }}
+              </code>
+            </pre>
+            <br>
+            <h4>To print content of specific variable:</h4>
+            <pre>
+              <code>
+        {{ dump(foo) }}
               </code>
             </pre>
           </section>
