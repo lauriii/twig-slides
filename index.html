@@ -45,7 +45,7 @@
 			<div class="slides">
         <section>
           <h1>Drupal 8 Theming</h1>
-          <h5>24.9.2014 Lauri Eskola</h5>
+          <h5>1.10.2014 Lauri Eskola</h5>
         </section>
         <section>
           <section>
@@ -62,7 +62,37 @@
         </section>
         <section>
           <section>
-            <h2>What's new?</h2>
+            <h2>Drupal 7 Front-end Sucks!</h2>
+          </section>
+          <section>
+            <h2>Why?</h2>
+          </section>
+          <section data-background="img/hamburger.jpg">
+          </section>
+          <section data-background="img/hamburger_explained.jpg">
+          </section>
+          <section data-background="img/markup.png">
+          </section>
+          <section data-background="img/markup1.jpg">
+          </section>
+          <section data-background="img/markup2.jpg">
+          </section>
+          <section data-background="img/huge-hamburger.jpg">
+          </section>
+          <section data-background="img/fries.jpg">
+          </section>
+          <section data-background="img/sides.jpg">
+          </section>
+          <section data-background="img/hamburger-with-fries.jpg">
+          </section>
+          <section data-background="img/eating.jpg">
+          </section>
+          <section data-background="img/heartattack.jpg">
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>What's changed for Drupal 8?</h2>
           </section>
           <section>
             <h2>HTML5</h2>
@@ -97,7 +127,7 @@
             <h2 class="fragment slide-in">ie 7</h2>
             <h2 class="fragment slide-in">ie 8</h2>
           </section>
-          <section data-background="http://www.reactiongifs.us/wp-content/uploads/2013/06/cheering_minions.gif">
+          <section data-background="img/mario_and_luigi.jpg">
           </section>
           <section>
             <h2>Drupal CSS</h2>
@@ -195,6 +225,9 @@
         <section>
           <section data-background="http://www.chewy.com/c/sites/default/files/imce/images/article/Happy-smiling-cat-portrait.jpg">
             <h1>Twig</h1>
+          </section>
+          <section>
+            <img src="img/hack_template.jpg">
           </section>
           <section>
             <h2>Basics in under 5 minutes</h2>
@@ -490,17 +523,28 @@
             </pre>
           </section>
           <section>
-            <h2>Add/Remove class</h2>  
+            <h2>Add class</h2>  
             <h4><a href="https://www.drupal.org/node/2325067">More information #2325067</a></h4>
             <pre>
               <code class="xml">
       &lt;div{{ attributes.addClass('field-item-' ~ name|clean_class) }}&gt;
               </code>
             </pre>
-            OR
+          </section>
+          <section>
+            <h2>Remove class</h2>  
+            <pre>
+              <code>
+  &lt;?php
+  
+  function node_preprocess_node(&$variables) {
+    $variables['attributes']->addClass(['carrot', 'potato']);
+  }
+              </code>
+            </pre>
             <pre>
               <code class="xml">
-      &lt;div{{ attributes.removeClass('GTFO', 'i-hate--you') }}&gt;
+  &lt;div{{ attributes.removeClass('carrot', 'potato').addClass('bacon', 'beef') }}&gt;
               </code>
             </pre>
           </section>
@@ -551,7 +595,7 @@
           </section>
         </section>
         <section>
-          <section data-background="img/cleaning.jpeg">
+          <section data-background="img/vim.jpg">
             <h2>Deep template clean up</h2>
           </section>
           <section>
@@ -596,15 +640,14 @@
           </section>
           <section>
             <h2>How it works?</h2>
-            <pre>
-              <code>
+            <pre class="code">
+
     &lt;?php
 
     public static function escape($string) {
-      return static::isSafe($string) ? $string : String::checkPlain($string);
+      return <span class="fragment highlight-current-red">static::isSafe($string)</span> ? <span class="fragment highlight-current-red">$string</span> : <span class="fragment highlight-current-red">String::checkPlain($string)</span>;
     }
                 
-              </code>
             </pre>
           </section>
         </section>
@@ -692,6 +735,9 @@
           <section>
             <h1>Questions?</h1>
           </section>
+          <section data-background="img/party-sponsor.jpg">
+            <video src="https://r7---sn-ncc-cxbl.googlevideo.com/videoplayback?initcwndbps=2377500&upn=F2-XpsAZPHY&source=youtube&ipbits=0&fexp=900233%2C912130%2C914071%2C916943%2C930663%2C932404%2C934040%2C935666%2C947209%2C947215%2C948703%2C952302%2C952901%2C953912%2C957103%2C957201&key=yt5&sver=3&ratebypass=yes&expire=1414826059&ip=89.216.30.8&requiressl=yes&mt=1414804372&sparams=id%2Cinitcwndbps%2Cip%2Cipbits%2Citag%2Cmime%2Cmm%2Cms%2Cmv%2Cratebypass%2Crequiressl%2Csource%2Cupn%2Cexpire&mv=m&mime=video%2Fwebm&ms=au&mm=31&id=o-AMkqvrBkkbYoYAMk5iZhlzQOh7OPkde1yhkVW0tb-SdA&signature=C439F426B24F7E0EAEB4103787F249C5DCA52856.8F5D3FDFA1A8BB2DA351CAFBB942365B3FCADDFA&itag=43&cpn=077msBA1idKrGZRi&ptk=youtube_multi&oid=SlODfwbK82f2lVHy5P82EA.8Td-asijjguOS4RL5HexHg.O2OZ0PbNTLPgq-m8EX5c4A.GoednyIs730UDQtrvI_P-Q&pltype=contentugc&c=WEB&cver=html5" style="display: none;" data-autoplay></video>
+          </section>
         </section>
       </div>
 		</div>
@@ -729,7 +775,11 @@
 					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
 					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { 
+            [].forEach.call( document.querySelectorAll( 'code, .code' ), function( v, i) {
+              hljs.highlightBlock(v);
+            });
+          } },
 					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
 					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
 				]
