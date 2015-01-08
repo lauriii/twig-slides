@@ -44,14 +44,24 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
         <section>
-          <h1>Drupal 8 Theming</h1>
-          <h5>7.10.2014 Lauri Eskola</h5>
+          <h1>Drupal 8 Theming (for backenders)</h1>
+          <h5>10.01.2015 Lauri Eskola</h5>
         </section>
         <section>
           <section>
-            <h4>Me:</h4>
-            <h3>Lauri Eskola</h3>
-            <img src="img/lauri.jpg">
+            <h2>Lauri Eskola</h2>
+            <div class="l-fifty">
+              <img src="img/lauri.jpg">
+            </div>
+            <div class="l-fifty">
+              <ul>
+                <li class="fragment">Front and Back End Developer</li>
+                <li class="fragment">I live in Finland</li>
+                <li class="fragment">Working for Druid</li>
+                <li class="fragment">I do actually like cold</li>
+                <li class="fragment">Mostly working on Core issues related to Theme system on the Back End side</li>
+              </ul>
+            </div>
           </section>
           <section>
             <h2>@lauriii</h2>
@@ -62,160 +72,47 @@
         </section>
         <section>
           <section>
-            <h2>Drupal 7 Front-end Sucks!</h2>
-          </section>
-          <section>
-            <h2>Why?</h2>
-          </section>
-          <section data-background="img/hamburger.jpg">
-          </section>
-          <section data-background="img/hamburger_explained.jpg">
-          </section>
-          <section data-background="img/markup.png">
-          </section>
-          <section data-background="img/markup1.jpg">
-          </section>
-          <section data-background="img/markup2.jpg">
-          </section>
-          <section data-background="img/huge-hamburger.jpg">
-          </section>
-          <section data-background="img/fries.jpg">
-          </section>
-          <section data-background="img/sides.jpg">
-          </section>
-          <section data-background="img/hamburger-with-fries.jpg">
-          </section>
-          <section data-background="img/eating.jpg">
-          </section>
-          <section data-background="img/heartattack.jpg">
-          </section>
-        </section>
-        <section>
-          <section>
-            <h2>What's changed for Drupal 8?</h2>
-          </section>
-          <section>
-            <h2>HTML5</h2>
-            <img src="http://openacademy.github.io/HTML5-open-academy/session07-css3/images/css3_logo.png">
-          </section>
-          <section>
-            <h2>HTML5</h2>
-            <pre>
-              <code>
-      <header role="banner">
-        <h1>Dries FTW!</h1>
-        <nav>
-          <a href="/">home</a> | <a href="/info">info</a>
-        </nav>
-      </header>
-      <main>
-        <aside>
-          ...
-        </aside>
-        <div>
-          ... 
-        </div>    
-      </main>
-      <footer role="">
-      </footer>
-              </code>
-            </pre>
-          </section>
-          <section>
-            <h2>So Drupal 8 WON'T support</h2>
-            <h2 class="fragment slide-in">ie 6</h2>
-            <h2 class="fragment slide-in">ie 7</h2>
-            <h2 class="fragment slide-in">ie 8</h2>
-          </section>
-          <section data-background="img/mario_and_luigi.jpg">
-          </section>
-          <section>
-            <h2>Drupal CSS</h2>
-            <h3>Drupal 7</h3>
-            <pre>
-              <code class="coffeescript">
-      &lt;body class="html drupal7 is-awesome wtf not-logged-in no-sidebars page-node page-node- page-node-274 node-type-page">
-              </code>
-            </pre>
-            <h3>Drupal 8</h3>
-            <pre>
-              <code>
-      &lt;body&gt;
-              </code>
-            </pre>
-          </section>
-          <section>
-            <h2>CSS build on SMACSS and BEM</h2>
-            <h5><a href="https://www.drupal.org/node/1887918">More from #1887918</a></h5>
-            <h3>CSS</h3>
-            <pre>
-              <code>
-      .field {
-        margin: 6px 9px;
-      }
-      .field.field--name {
-        color: pink; 
-      }
-              </code>
-            </pre>
-            <h3>HTML</h3>
-            <pre>
-              <code class="xml">
-      &lt;div class="field field--name" /&gt;
-              </code>
-            </pre>
-          </section>
-          <section>
-            <h2>Seven CSS file structure</h2>
-            <img src="img/seven_css_structure.png">
-          </section>
-          <section>
-            <h3>Removing CSS files</h3>
-            <video controls data-autoplay>
-              <source src="videos/remove-css.mp4" type="video/mp4">
-            </video>
-          </section>
-        </section>
-        <section>
-          <section>
-            <h2>Drupal 8 File structure</h3>
-          </section>
-          <section>
-            <h2>No more</h2>
-            <h3>sites/all/where/the/f*ck/is/my/themes</h3>
-          </section>
-          <section>
-            <img src="img/file_structure.png">
-          </section>
-          <section>
-            Templates in template folder!
-            <img src="img/file_structure2.png">
-          </section>
-          <section>
-            <h1>AND!</h1>
-          </section>
-          <section>
-            <a href="https://www.drupal.org/node/2226207">
-              <h2>Templates are auto-loaded with hook_theme implementation key!</h2>
-            </a>
-          </section>
-          <section>
-            <h2>.php vs .twig</h2>
-            <h3>Drupal 7</h3>
-            <h3>55 templates</h3>
-            <h3>154 functions</h3><br>
-            <h3>Drupal 8</h3>
-            <h3>21 functions</h3>
-            <h3>149 templates</h3>
-          </section>
-        </section>
-        <section>
-          <section>
-            <h2>Completely new theme layer!</h2>
+            <h2>Changes related to theme layer</h2>
           </section>
           <section>
             <h3>Drupal 7 theme layer - WTF?</h3>
             <img src="img/theme_layer_d7.png" height="500px">
+          </section>
+          <section>
+            <h3>Template process layer <span class="fragment">...is gone!</span></h3>
+            <h3>hook_page_alter <span class="fragment">...is gone!</span></h3>
+          </section>
+          <section>
+            <img src="img/theme-layer-d7-d8_1.jpg" height="500px">
+          </section>
+          <section>
+            <h2>Theme functions</h2>
+            <h3 class="fragment">...are being converted to Twig templates..</h3>
+          </section>
+          <section>
+            <h3>Goodbye theme(), hello render arrays</h3>
+            <p>Drupal 7</p>
+            <pre>
+              <code>
+  &lt;?php
+  $variables['list'] = theme('item_list', array(
+    'items' => $items,
+  ));
+              </code>
+            </pre>
+            <p>Drupal 8</p>
+            <pre>
+              <code>
+  &lt;?php
+  $variables['list'] = array(
+    '#theme' => 'item_list',
+    '#items' => $items,
+  );
+              </code>
+            </pre>
+          </section>
+          <section>
+            <img src="img/theme_layer_d7-d8.png" height="500px">
           </section>
           <section>
             <h3>Drupal 8 theme layer - FTW!</h3>
@@ -223,268 +120,256 @@
           </section>
         </section>
         <section>
+          <section>
+            <h3>Theme suggestion hooks</h3>
+            <img src="img/theme_layer_d8_1.png" height="400px">
+          </section>
+          <section>
+            <h3>Theme suggestion hooks</h3>
+            <h4>Drupal 7</h4>
+            <pre>
+              <code class="php">
+  &lt;?php
+  /**
+   * Implements hook_preprocess_HOOK() for node templates.
+   */
+  function MYTHEME_preprocess_node(&$variables) {
+    $variables['theme_hook_suggestions'][] = 'node__' . 'first_suggestion';
+    $variables['theme_hook_suggestions'][] = 'node__' . 'second_more_specific_suggestion';
+  }
+              </code>
+            </pre>
+            <h4>Drupal 8</h4>
+            <pre>
+              <code class="php">
+  &lt;?php
+  /**
+   * Implements hook_theme_suggestions_HOOK_alter() for node templates.
+   */
+  function MYTHEME_theme_suggestions_node_alter(array &$suggestions, array $variables) {
+    $suggestions[] = 'node__' . 'first_suggestion';
+    $suggestions[] = 'node__' . 'second_suggestion';
+  }
+              </code>
+            </pre>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h3>Preprocess hooks & missing process functions</h3>
+            <img src="img/theme_layer_d8_2.png" height="400px">
+          </section>
+          <section>
+            <h2>Attributes</h2>
+            <pre>
+              <code>
+ &lt;?php
+ /**
+  * Implements hook_preprocess_node().
+  */
+ function hook_preprocess_node(&$variables) {
+   // Add new class.
+   $attributes->addClass('my-own-class');
+   // Remove elements default class.
+   $attributes->removeClass('default-class');
+   // Set elements id to kitten.
+   $attributes->setAttribute('id', 'kitten');
+ }
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h2>Attributes</h2>
+            <h3>Twig</h3>
+            <pre>
+              <code>
+ &lt;div{{ attributes }}>
+              </code>
+            </pre>
+            <div class="fragment">
+              Not like this:
+              <div style="position relative; margin: 5px auto; width: 90%;">
+                <pre class="fragment current-visible" style="position: absolute">
+                  <code class="xml">
+   &lt;div {{ attributes }}>
+                  </code>
+                </pre>
+                <pre class="fragment" style="position: absolute">
+                  <code class="xml">
+   &lt;div✖{{ attributes }}>
+                  </code>
+                </pre>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Attributes</h2>
+            <pre>
+              <code class="xml">
+ {%
+   set classes [
+     'a-lot-of',
+     'classes-needed',
+     'for-this-element'
+   ]
+ %}
+ &lt;div{{ attributes.removeClass('my-own-class').addClass('better-class', classes) }}>
+              </code>
+            </pre>
+          </section>
+        </section>
+        <section>
           <section data-background="http://www.chewy.com/c/sites/default/files/imce/images/article/Happy-smiling-cat-portrait.jpg">
             <h1>Twig</h1>
+            <h3>Crash course for backenders</h3>
           </section>
           <section>
-            <img src="img/hack_template.jpg">
-          </section>
-          <section>
-            <h2>Almost impossible in Twig</h2>
-            <pre>
-              <code>
-      &lt;?php
-
-      db_query('
-        DROP DATABASE;
-        ROLLBACK;
-      ');
-
-      $frontend_developers = 'rule';
-              </code>
-            </pre>
-          </section>
-          <section>
-            <h2>Basics in under 5 minutes</h2>
-            <h3>This is Twig, no Drupal!</h3>
-          </section>
-          <section>
-            <h2>Comments & Vars</h2>
-            <h3>PHP:</h3>
-            <pre>
-              <code>
-      &lt;?php
-
-      // My test variable
-      print $variable;
-              </code>
-            </pre>
-            <h3>Twig:</h3>
-            <pre>
-              <code>
-      {# My test variable #}
-      {{ variable }}
-              </code>
-            </pre>
-          </section>
-          <section>
-            <h2>Set variables</h2>
-            <pre>
-              <code>
-      {% set variable = 'result' %}
-              </code>
-            </pre>
-            <pre>
-            <code>
-      {%
-        set array = [
-          'foo',
-          'bar',
-        ]
-      %}
-              </code>
-            </pre>
-          </section>
-          <section>
-            <h2>Arrays</h2>
-            <h3>PHP:</h3>
-            <pre>
-              <code>
-      &lt;?php
-
-      // WTF?!
-      print $hamburger['sandwich']['und']->content['meat']['bacon']['stuff'] ?>
-              </code>
-            </pre>
-            <h3>Twig:</h3>
-            <pre>
-              <code>
-      {{ hamburger.sandwich.content.meat.bacon.stuff }}
-              </code>
-            </pre>
-          </section>
-          <section>
-            <h2>Finding stuff in Twig</h2>
-            <h4>To print all available variables:</h4>
-            <pre>
-              <code>
-        {{ dump() }}
-              </code>
-            </pre>
+            <h2>Twig magic</h2>
+            <p>{{ sandwich.cheese }}</p>
             <br>
-            <h4>To print content of specific variable:</h4>
+            <h4>Same in PHP</h4>
             <pre>
               <code>
-        {{ dump(foo) }}
+  // Array key.
+  $sandwich['cheese'];
+  // Object property.
+  $sandwich->cheese;
+  // Also works for magic get (provided you implement magic isset).
+  $sandwich->__isset('cheese'); && $sandwich->__get('cheese');
+  // Object method.
+  $sandwich->cheese();
+  // Object get method convention.
+  $sandwich->getCheese();
+  // Object is method convention.
+  $sandwich->isCheese();
+  // Method doesn't exist/dynamic method.
+  $sandwich->__call('cheese');
               </code>
             </pre>
           </section>
           <section>
-            <h2>Loops</h2>
+            <h3>Print what you want, when you want</h3>
+            <p>Drupal 7</p>
             <pre>
               <code>
-      <h2>Team Awesome</h2>
-      <ul>
-        {% for user in users %}
-          <li>{{ user.username}}</li>
-        {% endfor %}
-      </ul>
+  &lt;?php
+  // We hide the comments and links now so that we can render them later.
+  hide($content['comments']);
+  hide($content['links']);
+  print render($content);
               </code>
             </pre>
+            <p>Drupal 8</p>
             <pre>
               <code>
-        <h2>Team Awesome</h2>
-        <ul>
-          <li>cottser</li>        
-          <li>joel</li>
-          <li>david</li>
-          <li>mark carver</li>        
-          <li>mortendk</li>
-        </ul>
+ {# We give you what you ask for. #}
+ {{ content|without('comments', 'links') }}
               </code>
             </pre>
           </section>
           <section>
-            <h2>Loop stuff</h2>
+            <h2>Twig filters</h2>
+            <p>Meant to manipulate content. Simply takes the first parameter from a variable or inline string and returns it in different format.</p>
+            <br>
+            <h4>Example</h4>
             <pre>
               <code>
-      {{ loop.length }}    
+  {% set name = 'Lauri' %}
+  {# Print varibale using lenght filter. #}
+  {{ name|length }}
+              </code>
+            </pre>
+            <h4>Returns</h4>
+            <pre>
+              <code>
+  5
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h2>Twig functions</h2>
+            <p>More viable functions with multiple parameters meant to create simple front-end logic</p>
+            <pre>
+              <code>
+ {{ dump() }}
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h2>This magic is built in Twig</h2>
+            <p class="fragment">How ever I'm going to show you how to add these by your self!</p>
+          </section>
+          <section>
+            <h2>Adding Twig filters</h2>
+            <pre>
+              <code>
+  &lt;?php
+  /**
+   * A class providing my own Twig extension.
+   */
+  class MyTwigExtension extends TwigExtension {
+    /**
+     * {@inheritdoc}
+     */
+    public function getFilters() {
+      return array(
+        new \Twig_SimpleFilter('kitten', 'kitten'),
+      );
+    }
+  }
+              </code>
+            </pre>
+            <pre>
+              <code>
+  &lt;?php
+  /**
+   * Helper functions to help kittens born.
+   */
+  function kitten($string) {
+    return $string . ' kitten';
+  }
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h2>Adding Twig filters</h2>
+            <pre>
+              <code>
+  {% set variable = 'my text' %}
+  {{ variable|kitten }}
+              </code>
+            </pre>
+            <pre>
+              <code>
+  my text kitten
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h2>Adding Twig functions</h2>
+            <pre>
+              <code>
+  &lt;?php
+  /**
+   * A class providing my own Twig extension.
+   */
+  class MyTwigExtension extends TwigExtension {
 
-      {{ loop.first }}
-
-      {{ loop.last }}
-     
-      {{ loop.index }}
-
-      {% if loop.first %}
-        ...  
-      {% elseif loop.index == 2 %}
-        ...
-      {% elseif loop.last %}
-          ...
-      {% endif %}
+    /**
+     * {@inheritdoc}
+     */
+    public function getFunctions() {
+      return array(
+        new \Twig_SimpleFunction('url', array($this, 'getUrl'), array('is_safe_callback' => array($this, 'isUrlGenerationSafe'))),
+      );
+    }
+  }
               </code>
             </pre>
-          </section>
-         <section>
-            <h2>Loop with empty text</h2>
-            <pre>
-              <code>
-      <h2>Team Awesome</h2>
-      <ul>
-        {% for user in users %}
-          <li>{{ user.username}}</li>
-        {% else %}
-          <li>no results found</li>
-        {% endfor %}
-      </ul>
-              </code>
-            </pre>
-          </section>
-          <section>
-            <h2>Filter</h2>
-            <pre>
-              <code>
-      <p>
-        {% filter upper %}
-          uppercase for the win
-        {% endfilter %}
-      </p>
-              </code>
-            </pre>
-          </section>
-          <section>
-            <h2>|Filter</h2>
-            <pre>
-              <code>
-      {% set name = 'Lauri' %}
-      <span>           
-        {{ name|length }}
-      </span>
-              </code>
-            </pre>
-            <h3>Returns:</h3>
-            <pre>
-              <code>
-      <span>
-        5
-      </span>
-              </code>
-            </pre>
-          </section>
-          <section class="huge-list">
-            <ul>
-              <li>|abs</li>
-              <li>|batch</li>
-              <li>|capitalize</li>
-              <li>|covert_encoding</li>
-              <li>|date</li>
-              <li>|date_modify</li>
-              <li>|default</li>
-              <li>|escape</li>
-              <li>|first</li>
-              <li>|format</li>
-            </ul>
-            <ul>
-              <li>|join</li>
-              <li>|json_encode</li>
-              <li>|keys</li>
-              <li>|last</li>
-              <li>|length</li>
-              <li>|lower</li>
-              <li>|nl2br</li>
-              <li>|number_format</li>
-              <li>|merge</li>
-              <li>|upper</li>
-            </ul>
-            <ul>
-              <li>|raw</li>
-              <li>|replace</li>
-              <li>|reverse</li>
-              <li>|round</li>
-              <li>|slice</li>
-              <li>|sort</li>
-              <li>|split</li>
-              <li>|striptags</li>
-              <li>|title</li>
-              <li>|trim</li>
-            </ul>
-            <ul>
-              <li>|url_encode</li> 
-            </ul>
-          </section>
-          <section>
-            <h2>Twig blocks</h2>
-            page.html.twig
-            <pre>
-              <code>
-      {% block headerblock %}
-        <h2>This block needs more kittens!</h2>
-      {% endblock %}
-              </code>
-            </pre>
-            page--front.html.twig
-            <pre>
-              <code>
-      {% extends "page.html.twig" %}
-      {% block headerblock %}
-        {{ parent() }}
-        <h4>Kitten!</h4>
-      {% endblock %}
-              </code>
-            </pre>
-          </section>
-          <section>
-            <video controls data-autoplay>
-              <source src="videos/twig-blocks.mp4" type="video/mp4">
-            </video>
-          </section>
-          <section>
-            <h2>More stuff?</h2>
-            <h3><a href="http://twig.sensiolabs.org/">Twig documentation: http://twig.sensiolabs.org/</a></h3>
           </section>
           <section data-background="http://critterbabies.com/wp-content/gallery/kittens/cute-kitten-playing.jpg">
-            <h2>You no like it?</h2>
+            <h2>"I don't want to learn anything new!"</h2>
+            <h2>"I don't like Twig!"</h2>
           </section>
           <section data-background="img/there-i-fixed-it.jpg">
             <h2>Solution!</h2>
@@ -494,155 +379,6 @@
               </code>
             </pre>
             themename.info
-          </section>
-        </section>
-        <section>
-          <section>
-            <h2>Drupal specific Twig functionalities</h2>
-            <h4>This is Drupal!</h4>
-          </section>
-          <section>
-            <h2>Filters</h2>
-            <pre>
-              <code>
-      {% set class_name = 'lauri/druid' %}
-
-      {%
-        set contributors = [
-          'rteijeiro',
-          'joelpittet',
-          'Cottser',
-          'lauriii',
-          'Dries',
-        ]
-      %}
-
-      {{ class_name|clean_class }}
-      {{ contributors|without('lauriii') }},
-      {{ stuff|placeholder('kitten') }}
-              </code>
-            </pre>
-            <h3>Returns</h3>
-            <pre>
-              <code>
-      lauri-druid
-      rteijeiro,joelpittet,Cottser,Dries,
-      kitten
-          </section>
-              </code>
-            </pre>
-          <section>
-            <h2>HTML Attributes</h2>
-            <h4><a href="https://www.drupal.org/node/2325517">Not ready yet, more info #2325517</a></h4>
-            <h4>Preprocess:</h4>
-            <pre>
-              <code>
-      &lt;?php
-        function template_preprocess_username(&$variables) {
-          $variables['attributes'] = new Attribute();
-        }
-      ?&gt;
-              </code>
-            </pre>
-            <h4>Template:</h4>
-            <pre>
-              <code class="xml">
-      &lt;div{{ attributes.setAttribute('id', 'kitten').setAttribute('I-Love', 'Dries') }}&gt;
-
-      &lt;div{{ attributes.removeAttribute('id') }}&gt;
-              </code>
-            </pre>
-          </section>
-          <section>
-            <h2>Add class</h2>  
-            <h4><a href="https://www.drupal.org/node/2325067">More information #2325067</a></h4>
-            <pre>
-              <code class="xml">
-      &lt;div{{ attributes.addClass('field-item-' ~ name|clean_class) }}&gt;
-              </code>
-            </pre>
-          </section>
-          <section>
-            <h2>Remove class</h2>  
-            <pre>
-              <code>
-  &lt;?php
-  
-  function node_preprocess_node(&$variables) {
-    $variables['attributes']->addClass(['carrot', 'potato']);
-  }
-              </code>
-            </pre>
-            <pre>
-              <code class="xml">
-  &lt;div{{ attributes.removeClass('carrot', 'potato').addClass('bacon', 'beef') }}&gt;
-              </code>
-            </pre>
-          </section>
-          <section>
-            <h2>Translate</h2>  
-            <pre>
-              <code>
-      {{ 'Author: @username'| t({'@username':username}) }}
-              </code>
-            </pre>
-            <h4>Or:</h4>
-            <pre>
-              <code>
-      {% trans %}
-        Author {{ username }}
-      {% endtrans %}
-              </code>
-            </pre>
-          </section>
-          <section data-background="http://i2.kym-cdn.com/entries/icons/original/000/009/993/tumblr_m0wb2xz9Yh1r08e3p.jpg">
-            <h2>Twig debug</h2>
-            <h4>No more guessing!</h4>
-          </section>
-          <section>
-            <pre>
-              <code>
-    <!-- THEME DEBUG -->
-    <!-- CALL: _theme('page') -->
-    <!-- FILE NAME SUGGESTIONS:
-       * page--front.html.twig
-       * page--node.html.twig
-       x page.html.twig
-    -->
-    <!-- BEGIN OUTPUT from 'core/themes/bartik/templates/page.html.twig' -->
-              </code>
-            </pre>
-          </section>
-          <section>
-            <video controls data-autoplay>
-              <source src="videos/debug.mp4" type="video/mp4">
-            </video>
-          </section>
-          <section>
-            <h2>Want this to D7?</h2>
-          </section>
-          <section>
-            <h2><a href="https://www.drupal.org/node/2307505">Do it! #2307505</a></h2>
-          </section>
-        </section>
-        <section>
-          <section data-background="img/vim.jpg">
-            <h2>Deep template clean up</h2>
-          </section>
-          <section>
-            <h2>We've made even @mortendk rock while theming</h2>
-          </section>
-          <section>
-            <h5>pager.html.twig</h5>
-            <video controls>
-              <source src="videos/pager.mp4" type="video/mp4">
-            </video>
-          </section>
-          <section>
-            <h5>menu.html.twig</h5>
-            <video controls>
-              <source src="videos/menu.mp4" type="video/mp4">
-            </video>
           </section>
         </section>
         <section>
@@ -683,94 +419,24 @@
           </section>
         </section>
         <section>
-          <section data-background="https://pbs.twimg.com/media/BpioEelIEAIcJOT.jpg:large">
-            <h1>Consensus banana</h1>
-          </section>
-          <section>
-            <h2>Steps:</h2>
-            <ul>
-              <li>Phase 1. Move all the classes to templates <span class="fragment yes"> &#x2713; done!</li>
-              <li>Phase 2. Classy<span class="fragment yes"> <- we are here!</span></li>
-            </ul>
-          </section>
-          <section>
-            <h4>Phase 1:</h4>
-            <h2>Move classes from preprocess to templates</h2>
-          </section>
-          <section>
-            <h4>node.html.twig</h4>
-            <pre>
-              <code class="xml" contenteditable>
-  {%
-    set classes = [
-      'node',
-      'node--type-' ~ node.bundle|clean_class,
-      node.isPromoted() ? 'node--promoted',
-      node.isSticky() ? 'node--sticky',
-      not node.isPublished() ? 'node--unpublished',
-      view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
-      'clearfix',
-    ]
-  %}
-  &lt;article{{ attributes.addClass(classes) }}>
-   {{ content }}
-  &lt;/article>
-
-              </code>
-            </pre>
-          </section>
-          <section>
-            <video controls data-autoplay>
-              <source src="videos/class-cleanup.mp4" type="video/mp4">
-            </video>
-          </section>
-          <section data-background="http://www.stitchfashion.com/wp-content/uploads/2014/04/kviqq.png">
-            <h4>Phase 2:</h4>
-            <h2>New theme: Classy<h2>
-          </section>
-          <section>
-            <img src="img/custom-theme.png">
-          </section>
-          <section>
-            <img src="img/theme-overview.png">
-          </section>
-          <section>
-            <h2>What will this change?</h2>
-            <h3 class="fragment slide-in">Move all the class logic to Classy - so no classes from core <small>(even automated tests uses now Classy)</small></h3>
-            <h3 class="fragment slide-in">Simplify core markup even more! <small>(removing all unnecessary divs & other elements)</small></h3>
-          </section>
-          <section>
-            <h2>Creating new theme?</h2>
-            <h3>Remember to extend Classy!</h3>
-          </section>
-        </section>
-        <section>
-          <section data-background="img/kitten.jpg">
-            <h2>Bonus!</h2>
-          </section>
-          <section>
-            <h2>No more hardcoded menu...</h2>
-            <img src="img/menu_as_block.png">
-          </section>
-          <section>
-            <h2>...or logo!</h2>
-            <img src="img/logo_block.png">
-          </section>
+          <h2>Sandwiches demo!</h2>
+          <p><a href="https://github.com/DrupalTwig/sandwich">https://github.com/DrupalTwig/sandwich</a>
         </section>
         <section>
           <section>
             <h2>Want to help?</h2>
-            <h3 class="fragment">RC1 means markup freeze...</h3>
-            <h3 class="fragment">... so there's plenty of time still!</h3>
+            <h3 class="fragment">Isn't this stuff awesome?</h3>
+            <h3 class="fragment">There's still time to do more!</h3>
           </section>
           <section>
             <h2>Sprints tomorrow!</h2>
-            <h4>More info: <a href="http://ghent2014.drupalcamp.be/sprints">http://ghent2014.drupalcamp.be/sprints</a></h4>
-          </section>
-          <section>
-            <h2>Frontend United BOF right after this session</h2>
+            <h4>More info: <a href="http://goo.gl/OYNMVc">http://goo.gl/OYNMVc</a></h4>
           </section>
           <section data-background="img/questions.jpg">
+          </section>
+          <section>
+            <h2>Too slow?</h2>
+            <h3><a href="https://gratipay.com/DrupalCoreGittipTeam/">https://gratipay.com/DrupalCoreGittipTeam</a></h3>
           </section>
         </section>
       </div>

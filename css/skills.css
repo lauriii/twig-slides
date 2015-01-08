@@ -71,7 +71,7 @@ td, th {
   background: none;
 }
 
-.reveal pre code, .reveal pre {
+.reveal pre code, .reveal .code {
   background: #242424;
 }
 
@@ -103,4 +103,10 @@ td, th {
 .highlight-current-red.visible.current-fragment .variable,
 .highlight-current-red.visible.current-fragment .keyword {
   color: #d22222 !important;
+}
+
+.l-fifty {
+  float: left;
+  width: 48%;
+  padding: 0 1%;
 }
